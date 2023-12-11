@@ -24,21 +24,24 @@ export class Navbar extends Component {
                 {/*via added ==> <"bg-blue-300 bg-gradient-to-br from-green-300 via-blue-700 to-yellow-300">*/}
 
                 <div className="p-2 bg-[#444544] flex justify-between">
-                    <div className="flex">
-                        <h1 className="text-1xl text-secondary">
-                            Organic Shop</h1>
-                        <img className="h-5 w-5 ml-1 pt-1" src={logo}
-                             alt=""/>
-                    </div>
+
+                    <Link to="/">
+                        <div className="flex">
+                            <h1 className="text-1xl text-secondary">
+                                Organic Shop</h1>
+                            <img className="h-5 w-5 ml-1 pt-1" src={logo}
+                                 alt=""/>
+                        </div>
+                    </Link>
 
                     <ul className="list-none flex mt-1">
-                        <li className="mr-2 text-[11px] text-[#e6f0e6]">
+                        <li className="mr-2 text-[11px] text-[#e6f0e6] hover:text-green-400">
                             <Link to="/">Home</Link>
                         </li>
-                        <li className="mr-2 text-[11px] text-[#e6f0e6]">
+                        <li className="mr-2 text-[11px] text-[#e6f0e6] hover:text-green-400">
                             <Link to="/contact">Contact</Link>
                         </li>
-                        <li className="mr-2 text-[11px] text-[#e6f0e6]">
+                        <li className="mr-2 text-[11px] text-[#e6f0e6] hover:text-green-400">
                             <Link to="/about">About</Link>
                         </li>
                     </ul>
@@ -47,12 +50,14 @@ export class Navbar extends Component {
                                    bg-green-400 pl-3 pr-3
                                    hover:text-tertiary"
                             onClick={this.onButtonClick}>
-                        Sign In</button>
+                        Sign In
+                    </button>
                 </div>
             </>
         );
     }
-    onButtonClick = () => {
+
+    private onButtonClick = () => {
         alert("Button Clicked!")
     }
 }
