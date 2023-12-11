@@ -18,8 +18,15 @@ export class Navbar extends Component {
                 {/*height width comparing with screen size ==> <div className="h-20 w-1/3">*/}
                 {/*shadow added ==> <div className="rotate-12 shadow-gray-900 shadow-xl hover:shadow-red-500">*/}
                 {/*hover with cursor pointer ==> <"cursor-pointer">*/}
+                {/*min max height added ==> <"min-h-screen max-h-screen">*/}
+                {/*mx auto added ==> <"mx-auto">*/}
+                {/*via added ==> <"bg-blue-300 bg-gradient-to-br from-green-300 via-blue-700 to-yellow-300">*/}
 
-                <div className="p-4 bg-blue-300/20">
+                <div className="p-4 bg-blue-300
+                            bg-gradient-to-br
+                            from-green-300
+                            via-blue-700
+                            to-yellow-300">
                     <h1 className="text-4xl text-center text-tertiary">
                         This is Navbar!</h1>
                 </div>
