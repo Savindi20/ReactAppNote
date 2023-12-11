@@ -23,7 +23,6 @@ export class Navbar extends Component {
                 {/*via added ==> <"bg-blue-300 bg-gradient-to-br from-green-300 via-blue-700 to-yellow-300">*/}
 
                 <div className="p-2 bg-[#444544] flex justify-between">
-
                     <div className="flex">
                         <h1 className="text-1xl text-secondary">
                             Organic Shop</h1>
@@ -31,11 +30,17 @@ export class Navbar extends Component {
                              alt=""/>
                     </div>
 
-                    <ul className="list-none flex">
+                    <ul className="list-none flex mt-1">
                         <li className="mr-2 text-[11px] text-[#e6f0e6]">Home</li>
                         <li className="mr-2 text-[11px] text-[#e6f0e6]">Contact</li>
                         <li className="mr-2 text-[11px] text-[#e6f0e6]">About</li>
                     </ul>
+
+                    <button className="text-[8px] text-[#e6f0e6]
+                                   bg-green-400 pl-3 pr-3
+                                   hover:text-tertiary">
+                        Sign In
+                    </button>
                 </div>
             </>
         );
