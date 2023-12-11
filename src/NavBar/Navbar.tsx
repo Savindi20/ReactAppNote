@@ -16,6 +16,8 @@ export class Navbar extends Component {
                 {/*Opacity added ==> <div className="bg-blue-300/20">*/}
                 {/*height width added ==> <div className="h-20 w-20">*/}
                 {/*height width comparing with screen size ==> <div className="h-20 w-1/3">*/}
+                {/*shadow added ==> <div className="rotate-12 shadow-gray-900 shadow-xl hover:shadow-red-500">*/}
+                {/*hover with cursor pointer ==> <"cursor-pointer">*/}
 
                 <div className="p-4 bg-blue-300/20">
                     <h1 className="text-4xl text-center text-tertiary">

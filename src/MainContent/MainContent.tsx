@@ -11,7 +11,10 @@ export class MainContent extends Component {
                 {/*    Height <br/>& <br/> Width*/}
                 {/*</div>*/}
 
-                <div className="h-20 w-1/3 text-center p-1 bg-yellow-400">
+                <div className="h-20 w-20 text-center p-1 bg-yellow-400
+                                rotate-12 shadow-gray-900 shadow-xl
+                                hover:shadow-red-500
+                                !cursor-pointer">
                     Height <br/>& <br/> Width
                 </div>
             </div>
