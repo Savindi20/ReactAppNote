@@ -10,9 +10,9 @@ export class Navbar extends Component {
                 <h1 className="text-2xl text-center text-tertiary">This is Nav Bar</h1>
                 </div>*/}
 
-                <div className="p-2 bg-[#4444544] flex">
-                    <h1 className="text-1xl text-secondary">Organic shop</h1>
-                    <img className='h-10 w-10 ml-1 pt-1' src={logo} alt=''/>
+                <div className="p-4 bg-blue-300">
+                    <h1 className="text-4xl text-center text-tertiary">
+                        This is Navbar!</h1>
                 </div>
             </>
         );
