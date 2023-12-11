@@ -1,5 +1,5 @@
 import {Component} from "react";
-import logo from "../assets/download.jpeg";
+import logo from "../images/download.jpeg";
 
 export class Navbar extends Component {
     render() {
@@ -22,13 +22,11 @@ export class Navbar extends Component {
                 {/*mx auto added ==> <"mx-auto">*/}
                 {/*via added ==> <"bg-blue-300 bg-gradient-to-br from-green-300 via-blue-700 to-yellow-300">*/}
 
-                <div className="p-4 bg-blue-300
-                            bg-gradient-to-br
-                            from-green-300
-                            via-blue-700
-                            to-yellow-300">
-                    <h1 className="text-4xl text-center text-tertiary">
-                        This is Navbar!</h1>
+                <div className="p-2 bg-[#444544] flex">
+                    <h1 className="text-1xl text-secondary">
+                        Organic Shop</h1>
+                    <img className="h-5 w-5 ml-1 pt-1" src={logo}
+                         alt=""/>
                 </div>
             </>
         );
