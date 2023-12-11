@@ -13,11 +13,11 @@ export class Navbar extends Component {
                 {/*gradiant added ==> <div className="p-4 bg-blue-300 bg-gradient-to-r from-blue-900">*/}
                 {/*gradiant added ==> <div className="p-4 bg-blue-300 bg-gradient-to-r from-blue-90 to-red-500">*/}
                 {/*gradiant added ==> <div className="p-4 bg-blue-300 bg-gradient-to-br from-green-300 to-yellow-300">*/}
+                {/*Opacity added ==> <div className="bg-blue-300/20">*/}
+                {/*height width added ==> <div className="h-20 w-20">*/}
+                {/*height width comparing with screen size ==> <div className="h-20 w-1/3">*/}
 
-                <div className="p-4 bg-blue-300
-                            bg-gradient-to-br
-                            from-green-300
-                            to-yellow-300">
+                <div className="p-4 bg-blue-300/20">
                     <h1 className="text-4xl text-center text-tertiary">
                         This is Navbar!</h1>
                 </div>
