@@ -1,9 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Navbar} from "./view/NavBar/Navbar";
-import {MainContent} from "./view/MainContent/MainContent";
-import {Footer} from "./view/Fotter/Footer";
+import {Navbar} from "./view/common/NavBar/Navbar";
+import {MainContent} from "./view/common/MainContent/MainContent";
+import {Footer} from "./view/common/Fotter/Footer";
+import {BrowserRouter} from "react-router-dom";
 
 function App() {
   return (
@@ -16,9 +17,11 @@ function App() {
     //      <br/>
     //   <div className="bg-red p-10 text-align">Tailwind External utility BOX</div>
     <>
-        <Navbar></Navbar>
-        <MainContent></MainContent>
-        <Footer></Footer>
+        <BrowserRouter>
+            <Navbar></Navbar>
+            <MainContent></MainContent>
+            <Footer></Footer>
+        </BrowserRouter>
     </>
 )
     ;
