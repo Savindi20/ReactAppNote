@@ -5,6 +5,8 @@ import {Navbar} from "./view/common/NavBar/Navbar";
 import {MainContent} from "./view/common/MainContent/MainContent";
 import {Footer} from "./view/common/Fotter/Footer";
 import {BrowserRouter} from "react-router-dom";
+import {DefaultLayout} from "./view/common/DefaultLayout/DefaultLayout";
+import {Login} from "./view/pages/Login/Login";
 
 function App() {
   return (
@@ -18,9 +20,8 @@ function App() {
     //   <div className="bg-red p-10 text-align">Tailwind External utility BOX</div>
     <>
         <BrowserRouter>
-            <Navbar></Navbar>
-            <MainContent></MainContent>
-            <Footer></Footer>
+           <DefaultLayout/>
+            <Login/>
         </BrowserRouter>
     </>
 )
