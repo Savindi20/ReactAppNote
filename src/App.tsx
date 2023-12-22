@@ -16,13 +16,17 @@ function App() {
     //   <div className="bg-red p-10 text-align">Tailwind External utility BOX</div>
     <>
         <BrowserRouter>
-            <Routes>
-                <Route path="/*" Component={DefaultLayout}></Route>
-                <Route path="/login" Component={Login}></Route>
-            </Routes>
-           {/*<DefaultLayout/>*/}
-           {/* <Login/>*/}
-        </BrowserRouter>
+         {/*<DefaultLayout/>*/}
+         {/* <Login/>*/}
+          <Routes>
+              <Route path="/*"
+                     Component={DefaultLayout}>
+              </Route>
+              <Route path="/login"
+                     Component={Login}>
+              </Route>
+          </Routes>
+      </BrowserRouter>
     </>
 )
     ;

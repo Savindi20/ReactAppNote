@@ -35,9 +35,9 @@ export class Home extends Component {
                                 items-center
                                 mx-auto">
                     {
-                        data.map((product: any) => (
+                          data.map((product: any) => (
                             <Product key={product.id} data={product}/>
-                        ))
+                          ))
                     }
 
                 </div>
