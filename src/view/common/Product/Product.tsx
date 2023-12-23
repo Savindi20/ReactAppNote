@@ -3,7 +3,19 @@ interface ProductProps {
     data: any
 }
 
-export class Product extends Component<ProductProps> {
+interface ProductState {
+    isActive: boolean
+}
+
+export class Product extends Component<ProductProps, ProductState> {
+
+    constructor(props: ProductProps) {
+        super(props);
+        this.state = {
+            isActive: false
+        }
+    }
+
     render() {
 
         const {data} = this.props;
@@ -34,10 +46,17 @@ export class Product extends Component<ProductProps> {
                 </div>
 
                 <div className="flex justify-center">
-                    <button className="w-full mt-1 p-[2.4px] bg-secondary text-[8px] border-gray-500 border-[0.5px] bg-green-400">Add to Cart
+                    <button className="w-full mt-1 p-[2.4px] 
+                                        bg-secondary text-[8px] 
+                                        border-gray-500 border-[0.5px] 
+                                        bg-green-400"  onClick={this.addtoCarrtOnClick}>
+                                        Add to Cart
                     </button>
                 </div>
             </div>
         );
+    }
+    private addtoCarrtOnClick = () => {
+        console.log("Add to cart clicked!");
     }
 }
