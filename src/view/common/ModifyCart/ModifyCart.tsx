@@ -10,6 +10,8 @@ interface ModifyCartState{
 
 export class ModifyCart extends Component<ModifyCartProps, ModifyCartState> {
 
+    public static ItemsList = [];
+
     constructor(props: ModifyCartProps) {
         super(props);
         this.state = {
@@ -27,6 +29,9 @@ export class ModifyCart extends Component<ModifyCartProps, ModifyCartState> {
         const onDecreaseItemCount = () => {
             if(itemCount>0){
                 this.setState({itemCount:itemCount-1})
+            }
+            else{
+                alert("Item count cannot be less than 0")
             }
         }
 
