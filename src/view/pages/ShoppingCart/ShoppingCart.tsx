@@ -32,7 +32,13 @@ export class ShoppingCart extends Component<ShoppingCartProps> {
                             </td>
                         </tr>
                     : this.props.itemList.map((item) => (
-                        <tr className="border-black border-[0.5px] px-1"></tr>
+                        <tr className="border-black border-[0.5px] px-1">
+                            <th className="text-[9px] font-normal border-black border-[0.5px] px-1">{item.product.id}</th>
+                            <th className="text-[9px] font-normal border-black border-[0.5px] px-1">{item.product.name}</th>
+                            <th className="text-[9px] font-normal border-black border-[0.5px] px-1">{item.product.price+""+item.product}</th>
+                            <th className="text-[9px] font-normal border-black border-[0.5px] px-1">{item.itemCount}</th>
+                            <th className="text-[9px] font-normal border-black border-[0.5px] px-1">{(item.product.price*item.itemCount)+''+item.product.currency}</th>
+                        </tr>
                     ))
                 }
             </table>
