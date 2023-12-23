@@ -1,4 +1,5 @@
 import {Component} from "react";
+import ModifyCart from "../ModifyCart/ModifyCart";
 interface ProductProps {
     data: any
 }
@@ -48,14 +49,8 @@ export class Product extends Component<ProductProps, ProductState> {
                 <div className="flex justify-center">
                     {
                         this.state.isActive ?
-                        <div className="w-full mt-1 p-[2.4px] 
-                                        bg-secondary text-[8px] text-center
-                                        border-gray-500 border-[0.5px] 
-                                        bg-red-400">
-                                        Modify Cart
-                        </div> :
-                        <button className="w-full mt-1 p-[2.4px] 
-                                        bg-secondary text-[8px] 
+                        <ModifyCart/>:
+                        <button className="w-full mt-1 p-[2.4px] text-[8px] 
                                         border-gray-500 border-[0.5px] 
                                         bg-green-400" onClick={this.addtoCarrtOnClick}>
                                     Add to Cart
