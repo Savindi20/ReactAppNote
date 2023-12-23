@@ -12,7 +12,7 @@ export class Product extends Component<ProductProps, ProductState> {
     constructor(props: ProductProps) {
         super(props);
         this.state = {
-            isActive: false
+            isActive:false
         }
     }
 
@@ -46,17 +46,29 @@ export class Product extends Component<ProductProps, ProductState> {
                 </div>
 
                 <div className="flex justify-center">
-                    <button className="w-full mt-1 p-[2.4px] 
+                    {
+                        this.state.isActive ?
+                        <div className="w-full mt-1 p-[2.4px] 
+                                        bg-secondary text-[8px] text-center
+                                        border-gray-500 border-[0.5px] 
+                                        bg-red-400">
+                                        Modify Cart
+                        </div> :
+                        <button className="w-full mt-1 p-[2.4px] 
                                         bg-secondary text-[8px] 
                                         border-gray-500 border-[0.5px] 
-                                        bg-green-400"  onClick={this.addtoCarrtOnClick}>
-                                        Add to Cart
-                    </button>
+                                        bg-green-400" onClick={this.addtoCarrtOnClick}>
+                                    Add to Cart
+                        </button>
+                    }
                 </div>
             </div>
         );
     }
     private addtoCarrtOnClick = () => {
-        console.log("Add to cart clicked!");
+        this.setState({isActive:!this.state.isActive},() => {
+            console.log(this.state.isActive)
+            alert(this.state.isActive)
+        })
     }
 }
