@@ -1,4 +1,5 @@
 import {Component} from "react";
+import { CartItem } from "../../../model/CartItem";
 
 interface ModifyCartProps{
     data:any
@@ -10,12 +11,22 @@ interface ModifyCartState{
 
 export class ModifyCart extends Component<ModifyCartProps, ModifyCartState> {
 
-    public static ItemsList = [];
+    public static ItemsList:CartItem[] = [];
 
     constructor(props: ModifyCartProps) {
         super(props);
         this.state = {
             itemCount:0
+        }
+    }
+
+    componentDidMount(): void {
+        const {itemCount} = this.state;
+
+        if(this.props.data.isAdded){
+            if(!ModifyCart.ItemsList.find(item => item.product.id === this.props.data.Product.id)){
+            ModifyCart.ItemsList.push({product:this.props.data.Product, itemCount: itemCount})
+            }
         }
     }
 
