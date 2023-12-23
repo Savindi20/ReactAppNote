@@ -30,6 +30,17 @@ export class ModifyCart extends Component<ModifyCartProps, ModifyCartState> {
         }
     }
 
+    componentDidUpdate(prevProps: Readonly<ModifyCartProps>, prevState: Readonly<ModifyCartState>, snapshot?: any): void {
+
+        let {itemCount} = this.state
+        let item = ModifyCart.ItemsList.find(item => item.product.id === this.props.data.product.id)
+
+        //@ts-ignore
+        let index = ModifyCart.ItemsList.indexOf(item);
+        ModifyCart.ItemsList.splice(index);
+        ModifyCart.ItemsList.push({product:this.props.data.Product, itemCount: this.state.itemCount})
+    }
+
     render() {
         const itemCount = this.state.itemCount;
 
