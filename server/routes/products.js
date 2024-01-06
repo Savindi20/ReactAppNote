@@ -8,4 +8,6 @@ const {productsList} = require('../constants/const')
 // http://localhost:4000/products/all
 router.get('/all', ProductsController.GetAllProducts);
 
+router.post('/save', ProductsController.SaveProduct);
+
 module.exports = router;
