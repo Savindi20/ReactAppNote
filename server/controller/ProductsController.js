@@ -1,5 +1,6 @@
 const {productsList} = require("../constants/const");
 const Product = require("../model/Product");
+const {response} = require("express");
 
 const ProductsController = {
     GetAllProducts:async function(req, res, next) {
@@ -21,6 +22,19 @@ const ProductsController = {
 
             const product = await Product.create(ProductData)
             res.status(200).json(product)
+        }catch (err){
+            console.error(err);
+            res.stale(500).json({
+                error: "Something went Wrong"
+            })
+        }
+    },
+
+    GetProduct :async function (req, res, next){
+        try {
+            const ProductID = req.params.id;
+            const  product = await Product.find({id:ProductID});
+            res.status(200).json(product);
         }catch (err){
             console.error(err);
             res.stale(500).json({
