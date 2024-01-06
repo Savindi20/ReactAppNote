@@ -20,13 +20,14 @@ const ProductModel = mongoose.Schema(
         },
         "currency":{
             require:true,
-            type:Number
+            type:String
         },
         "image": {
             require:true,
             type:String
         },
     },
+    {versionKey: false}
 );
 
 const Product = mongoose.model('Product', ProductModel)
