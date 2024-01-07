@@ -41,6 +41,44 @@ const ProductsController = {
                 error: "Something went Wrong"
             })
         }
+    },
+
+    UpdateProduct: async function(req, res, next){
+        try {
+            const productId = req.params.id;
+            const productData = req.body;
+
+            const updatedProduct = await Product.findOneAndUpdate(
+                {
+                    id:productId
+                },productData,
+                {new: true});
+
+            if(!updatedProduct){
+                return res.status(404).json({error: 'Product not found'})
+            }
+
+            res.status(200).json(updatedProduct)
+        }catch (error){
+            console.error("Update product error " + error)
+            res.status(500).json({error: 'Something went wrong'})
+        }
+    },
+
+    DeleteProduct: async function(req, res, next){
+        try {
+            const productId = req.params.id;
+            const result = await Product.deleteOne({id:productId});
+
+            if(result.deletedCount == 0){
+                return res.status(404)
+            }
+
+            res.status(200).json({message: 'Product deleted'})
+        }catch (error){
+            console.error("Update delete error " + error)
+            res.status(500).json({error: 'Something went wrong'})
+        }
     }
 }
 module.exports = ProductsController;
